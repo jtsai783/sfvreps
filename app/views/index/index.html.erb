@@ -1,0 +1,30 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 title">
+			SFVREPS
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<form
+				action="/players"
+				method="get"
+			>
+				<input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+				<div class="input-group input-group-lg">
+					<input type="text" name="player-name" class="form-control" placeholder="Player ID" aria-describedby="basic-addon1">
+					<span class="input-group-btn">
+						<button class="btn btn-default" type="submit">
+							<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+						</button>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-4">col 0</div>
+		<div class="col-sm-4">col 2</div>
+		<div class="col-sm-4">col 3</div>
+	</div>
+</div>

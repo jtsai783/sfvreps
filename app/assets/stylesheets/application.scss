@@ -1,0 +1,93 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#comment-submit-button{
+	width: 100%;
+}
+
+.comment-page-row{
+	margin-top: 20px;
+}
+
+.title{
+	text-align: center;
+	font-size: 3em;
+	font-weight: bold;
+}
+
+.player-name{
+	font-size: 2em;
+}
+
+#thumb-button-group {
+  width: 100%;
+  label {
+    width: 50%;
+  }
+}
+
+#comment-box {
+	width: 100%;
+}
+
+#tripcode-input {
+	width: 80%;
+	display: inline-block;
+}
+
+.comment-negative {
+	background-color: #ffe6e6;
+}
+
+.comment-positive {
+	background-color: #d9f2d9
+}
+
+.comment-head{
+	padding-top: 10px;
+	div {
+		display: inline-block;
+	}
+}
+
+.comment-thumb-up{
+	color: green;
+}
+
+.comment-thumb-down{
+	color: red;
+}
+
+.author{
+	font-weight: bold;
+}
+
+.tripcode{
+	font-style: italic;
+	color: grey;
+}
+
+.comment{
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+
+@media (max-width: 767px) { 
+	#comment-box {
+		width: 100%;
+		margin-top: 20px;
+	}
+}

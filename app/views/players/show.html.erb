@@ -1,0 +1,48 @@
+<div class="container">
+	<div class="row">
+		<div class="col-xs-12 player-name">
+			<%= @name %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12" style="margin-bottom: 15px;">
+			<%= link_to "Leave a comment", new_player_comment_url(@name) %>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+
+		<% @comments.each do |comment| %>
+			<% if comment.rating == 1 %>
+				<div class="row comment-positive">
+			<% else %>
+				<div class="row comment-negative">
+			<% end %>
+			<div class="col-xs-12">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="comment-head">
+								<% if comment.rating == 1 %>
+									<span class="comment-thumb-up glyphicon glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+								<% else %>
+									<span class="comment-thumb-down glyphicon glyphicon glyphicon-thumbs-down" aria-hidden="true"></span>
+								<% end	%>							
+								<div class="author"><%= comment.byline %></div>
+								<div class="tripcode"><%= comment.tripcode %></div>
+								<div class="date"><%= comment.created_at.strftime("%Y-%m-%d") %></div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-xs-12 comment">
+							<%= comment.comment %>
+						</div>
+					</div>	
+				</div>
+			</div>
+		<% end %>
+
+
+		</div>
+	</div>
+</div>		
